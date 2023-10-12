@@ -1,0 +1,9 @@
+@import "../../css/deffault.module.css";
+.loader {
+	background-color: var(--theme-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	height: 100vh;
+}

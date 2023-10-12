@@ -1,0 +1,18 @@
+.buttons {
+	display: inline-flex;
+}
+
+.confirm {
+	padding: 0.5rem;
+	background: var(--func-accees, #3f4d02);
+}
+.cancel {
+	padding: 0.5rem;
+	margin: 0 0 0 1.25rem;
+	background: var(--func-error, #a20808);
+}
+
+.button {
+	width: 3.2rem;
+	height: 3rem;
+}

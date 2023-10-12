@@ -1,0 +1,35 @@
+@import "../../../css/deffault.module.css";
+
+.screen {
+	background: var(--theme-primary, #83a601);
+	min-height: 120vh;
+	overflow: scroll;
+}
+.screen::-webkit-scrollbar {
+	width: 0;
+}
+.container {
+	position: relative;
+}
+.todos {
+	display: flex;
+	flex-direction: column;
+}
+@media (min-width: 660px) {
+	.todos {
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+	}
+}
+.add {
+	width: 40px;
+	height: 40px;
+	margin: 2.25rem auto 0 auto;
+	display: block;
+}
+.add img {
+	width: 100%;
+	height: 100%;
+}

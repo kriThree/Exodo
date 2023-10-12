@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id            String          @id @default(cuid())
+  image         String          @default("1")
+  name          String
+  password      String
+  email         String
+  success       Int             @default(0)
+  fail          Int             @default(0)
+  CommandToUser CommandToUser[]
+  notifications Notification[]
+  MyCommands    Command[]       @relation("admin")
+}
+
+model CommandToUser {
+  id        String  @id @default(cuid())
+  user      User    @relation(fields: [userId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  command   Command @relation(fields: [commandId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  commandId String
+  userId    String
+}
+
+model Command {
+  id            String          @id @default(cuid())
+  name          String
+  description   String
+  admin         User            @relation("admin", fields: [adminId], references: [id])
+  todos         Todo[]
+  Notifications  Notification[]
+  isLocal       Boolean
+  adminId       String
+  CommandToUser CommandToUser[]
+}
+
+model Todo {
+  id          String  @id @default(cuid())
+  name        String
+  description String
+  tag         String
+  command     Command @relation(fields: [commandId], references: [id])
+  commandId   String
+}
+
+model Notification {
+  id          String  @id @default(cuid())
+  to          User    @relation(fields: [recepientId], references: [id])
+  from        Command @relation(fields: [commandId], references: [id])
+  commandId   String
+  recepientId String
+  type        String
+  senderId    String?
+  fail        Int?
+  success     Int?
+}

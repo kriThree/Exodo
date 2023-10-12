@@ -1,0 +1,41 @@
+@import "../../css/deffault.module.css";
+
+.modal__error {
+	position: absolute;
+	transform: translate(-50%, 0);
+	opacity: 0;
+	width: 10rem;
+	height: 0rem;
+	left: 50%;
+	background-color: bisque;
+	z-index: 500;
+	transition: 1000ms;
+	font-family: var(--font-secondary);
+}
+.modal__error_active {
+	animation-duration: 3s;
+	animation-name: slide;
+	top: 50%;
+}
+@keyframes slide {
+	0% {
+		height: 0rem;
+		opacity: 0;
+		top: 0%;
+	}
+	30% {
+		height: 5rem;
+		top: 50%;
+		opacity: 1;
+	}
+	50% {
+		height: 5rem;
+		top: 50%;
+		opacity: 1;
+	}
+	90% {
+		top: 90%;
+		height: 0;
+		opacity: 0;
+	}
+}

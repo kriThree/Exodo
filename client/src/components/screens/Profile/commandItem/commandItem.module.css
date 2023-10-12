@@ -1,0 +1,32 @@
+@import "../lineOptions.module.css";
+@import "../../../../css/deffault.module.css";
+.command {
+	flex: 1 0;
+	padding: 1.5rem var(--command-padding);
+	border-bottom: 2px solid var(--neutral-20);
+	display: flex;
+	max-height: 10rem;
+	overflow: hidden;
+}
+.command__name {
+	width: calc(var(--line-margin));
+
+	overflow: hidden;
+	font-size: 2rem;
+	align-self: center;
+	overflow-x: scroll;
+}
+.command__name::-webkit-scrollbar {
+	height: 0.4rem;
+}
+.command__name::-webkit-scrollbar-thumb {
+	background-color: var(--neutral-20);
+}
+.command__users {
+	display: flex;
+	align-self: center;
+	margin: 0 0 0 calc(var(--command-padding) * 2);
+}
+.command__user:not(:last-child) {
+	margin: 0 0.5rem 0 0;
+}

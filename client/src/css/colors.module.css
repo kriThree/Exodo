@@ -1,0 +1,16 @@
+@import "../css/deffault.module.css";
+.command1 {
+	background-color: var(--commandPallete-1);
+}
+.command2 {
+	background-color: var(--commandPallete-2);
+}
+.command3 {
+	background-color: var(--commandPallete-3);
+}
+.command4 {
+	background-color: var(--commandPallete-4);
+}
+.command5 {
+	background-color: var(--commandPallete-5);
+}

@@ -1,0 +1,30 @@
+@import "../../../../css/deffault.module.css";
+
+.button {
+	width: 100%;
+	height: 5rem;
+	background: var(--login-page, #313d00);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	color: var(--neutral-10, #ffe4c4);
+	font-family: var(--font-primary);
+}
+@media (min-width: 530px) {
+	.button {
+		width: 80%;
+	}
+}
+@media (min-width: 700px) {
+	.button {
+		width: 20rem;
+	}
+}
+@media (min-width: 800px) {
+	.button {
+		margin: 5rem 0 0 0;
+		width: 100%;
+		grid-area: d;
+	}
+}

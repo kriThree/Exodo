@@ -1,0 +1,10 @@
+.user {
+	display: flex;
+	background: var(--neutral-20, #d9d9d9);
+	justify-content: space-between;
+	color: var(--neutral-0, #131212);
+	padding: 0.5rem 1.25rem 0.5rem;
+}
+.invite_active {
+	opacity: 0.4;
+}

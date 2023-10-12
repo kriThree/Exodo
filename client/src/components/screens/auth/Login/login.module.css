@@ -1,0 +1,99 @@
+@import "../../../../css/deffault.module.css";
+
+.screen {
+	background: var(--theme-primary, #83a601);
+}
+.container {
+	padding: 3rem 0 2.5rem 0;
+}
+
+.quotes {
+	background: var(--theme-secondary, #3f4d02);
+	font-size: 1.25rem;
+	height: 12rem;
+	width: 20rem;
+	color: var(--neutral-100);
+	margin: 1.25rem 0 1rem 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.quotesScroll {
+	display: flex;
+	position: absolute;
+	transition: 3000ms;
+}
+.quotes__text {
+	width: 100%;
+	letter-spacing: 0.1rem;
+	font-family: var(--font-primary);
+}
+
+.quote {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 2.5rem 1rem 0.5rem 1rem;
+	width: 20rem;
+}
+.quotes__author {
+	text-align: right;
+}
+.inputs {
+	margin: 0 0 1rem 0;
+}
+
+.forget {
+	color: var(--neutral-70, #656565);
+	opacity: 0.9;
+	font-family: var(--font-primary);
+	margin: 1rem 0 0 0;
+}
+.registration {
+	font-family: var(--font-primary);
+	color: var(--neutral-70, #656565);
+	opacity: 0.9;
+}
+.registration__link {
+	cursor: pointer;
+	color: var(--func-error, #a20808);
+}
+.link {
+	color: var(--func-error, #a20808);
+}
+@media (min-width: 800px) {
+	.container {
+		display: grid;
+		grid-template-areas:
+			"a a"
+			"b c"
+			"d c"
+			"e e";
+
+		gap: 0 5%;
+		grid-template-columns: 50% 45%;
+	}
+	.inputs {
+		grid-area: b;
+	}
+	.quotes {
+		grid-area: c;
+	}
+	.signInButton {
+		grid-area: d;
+	}
+	.forget {
+		grid-area: e;
+	}
+}
+@media (min-width: 1100px) {
+	.quotes {
+		height: 18rem;
+		width: 30rem;
+		grid-area: c;
+	}
+	.quote {
+		width: 30rem;
+		font-size: 2rem;
+	}
+}

@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "outDir": "./build",
+      "skipLibCheck": true,
+      "strict": true,
+      "target": "es2019",
+    },
+    // "references": [
+    //   {
+    //     "path": "../shared"
+    //   }
+    // ]
+   }

@@ -1,0 +1,9 @@
+:root {
+	--line-margin: 6rem;
+	--command-padding: 1rem;
+}
+@media (min-width:650px) {
+	:root{
+		--line-margin:8rem;
+	}
+}	

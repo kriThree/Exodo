@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const todos_1 = require("../controllers/todos");
+const auth_1 = require("../mdidleware/auth");
+const router = (0, express_1.Router)();
+router.use(auth_1.auth);
+router.get("/getAll", todos_1.getTodos);
+router.post("/add", todos_1.addTodo);
+router.delete("/remove", todos_1.removeTodo);
+router.delete("/success", todos_1.successTodo);
+router.put("/update", todos_1.updateTodo);
+exports.default = router;

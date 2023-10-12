@@ -1,0 +1,14 @@
+@import "../commandItem/commandItem.module.css";
+
+.rectangle {
+	height: 4rem;
+	width: 100%;
+	margin: 2.5rem 0 1.5rem;
+	background: var(--commands-1, #b9b9b9);
+}
+.name {
+	padding: 0 2rem 0 0;
+}
+.check {
+	margin: 0 1.5rem 0 0;
+}

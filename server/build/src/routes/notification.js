@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const auth_1 = require("../mdidleware/auth");
+const notification_1 = require("../controllers/notification");
+const router = (0, express_1.Router)();
+router.use(auth_1.auth);
+router.get("/getAll", notification_1.getAllNotifications);
+router.post("/rejectInvite", notification_1.rejectInivite);
+router.post("/acceptInvite", notification_1.acceptInvite);
+router.post("/rejectDaily", notification_1.rejectDaily);
+router.post("/acceptDaily", notification_1.acceptDaily);
+exports.default = router;

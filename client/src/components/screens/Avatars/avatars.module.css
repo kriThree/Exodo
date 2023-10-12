@@ -1,0 +1,32 @@
+@import "../../../css/deffault.module.css";
+.screen {
+	padding: 0 0 2rem 0;
+	background-color: var(--theme-primary);
+}
+.avatars__list {
+	padding: 2rem 0 0 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 2rem;
+}
+.avatar {
+	transition: 500ms;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 100%;
+	overflow: hidden;
+}
+.avatar img {
+	width: 100%;
+	height: 100%;
+}
+.avatar_select {
+	transform: scale(1.4);
+}
+.avatars__buttons {
+	margin: 2rem 0 0 0;
+	display: flex;
+	justify-content: space-around;
+}

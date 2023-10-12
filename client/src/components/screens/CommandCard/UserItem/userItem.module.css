@@ -1,0 +1,103 @@
+.user {
+	width: 100%;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px solid var(--neutral-20);
+	border-bottom: 1px solid var(--neutral-20);
+}
+.user:not(:last-child) {
+	margin: 0 0 1rem 0;
+}
+.user__avatar {
+	width: 2.8rem;
+	height: 2.8rem;
+	border-radius: 100%;
+	overflow: hidden;
+	margin: 0 0.8rem 0 0;
+}
+.user__name {
+	color: var(--neutral-100);
+	width: 20%;
+	margin: 0 3.3rem 0 0;
+	font-size: 0.875rem;
+}
+
+.user__counter {
+	padding: 1rem 1.25rem;
+	display: flex;
+	background: var(--commands-1, #b9b9b9);
+	height: 100%;
+	align-items: center;
+	font-size: 1.5rem;
+}
+.user__counter__success {
+	color: var(--func-accees, #4a5b03);
+	margin: 0 1rem 0 0;
+}
+.user__counter__fail {
+	color: var(--func-error, #a20808);
+}
+.user__role {
+	margin: 0 0.5rem;
+	width: 2rem;
+	height: 2rem;
+}
+.user__role_admin {
+	transform: scale(1.4) translate(13%);
+}
+.user__role img {
+	width: 100%;
+	height: 100%;
+}
+@media (min-width: 650px) {
+	.user {
+		width: 48%;
+		margin: 0;
+	}
+	.user:not(:last-child) {
+		margin: 0;
+	}
+}
+@media (min-width: 1024px) {
+	.user {
+		height: 10rem;
+		width: 30%;
+		border: 2px solid var(--neutral-20);
+		display: grid;
+		grid-template-areas:
+			"a avatar name"
+			"a role counter";
+		grid-template-columns: 5% 40% 55%;
+		grid-template-rows: 60% 40%;
+	}
+	.user__avatar {
+		width: 5rem;
+		height: 5rem;
+		grid-area: avatar;
+	}
+	.user__counter {
+		grid-area: counter;
+		display: flex;
+		padding: 0;
+		justify-content: space-around;
+	}
+	.user__name {
+		grid-area: name;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.user__role {
+		grid-area: role;
+	}
+	.user__counter__success {
+		margin: 0;
+	}
+}
+@media (min-width: 1250px) {
+	.user {
+		width: 23%;
+	}
+}

@@ -1,0 +1,36 @@
+@import "../../../../../css/deffault.module.css";
+@import "../../../../../css/colors.module.css";
+.command {
+	position: relative;
+	cursor: pointer;
+	border-radius: 100%;
+	width: 2rem;
+	transition: 500ms;
+	opacity: 0.8;
+	height: 2rem;
+}
+.command img {
+	width: 100%;
+	height: 100%;
+}
+
+.command__dropDownMenu {
+	position: absolute;
+	overflow: hidden;
+	transition: 1000ms;
+	opacity: 0;
+	height: 0;
+	top: 100%;
+	transform: translate(-50%);
+	left: 0;
+	background-color: var(--neutral-20);
+}
+.command__dropDownMenu_active {
+	padding: 0.5rem;
+	opacity: 1;
+	height: 2rem;
+}
+.command_select {
+	opacity: 1;
+	transform: scale(120%);
+}

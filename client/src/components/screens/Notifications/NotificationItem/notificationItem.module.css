@@ -1,0 +1,94 @@
+@import "../../../../css/deffault.module.css";
+
+.card {
+	position: relative;
+	padding: 1rem 1.25rem;
+	background: var(--additional-1, #390a04);
+	height: 11rem;
+	font-family: var(--font-primary);
+	color: var(--neutral-100);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 0.25rem;
+	font-size: 1.25rem;
+}
+.card:not(:last-child) {
+	margin: 0 0 2rem 0;
+}
+.command {
+	color: var(--commandPallete-4);
+	text-transform: uppercase;
+	font-family: var(--font-secondary);
+}
+.buttons {
+	display: flex;
+	justify-content: space-between;
+}
+.invite__button {
+	border-radius: 0.25rem;
+	font-size: 1.5rem;
+	width: 6.25rem;
+	height: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--neutral-10, #ffe4c4);
+}
+.invite__button_refuse {
+	background: var(--func-error, #a20808);
+}
+.invite__button_join {
+	background: var(--func-accees, #4a5b03);
+}
+
+.stat {
+	display: grid;
+	grid-template-areas:
+		"a a"
+		"b c"
+		"d d";
+	grid-template-columns: 60% 20%;
+	gap: 0 20%;
+	font-size: 1.25rem;
+	grid-template-rows: 20% 70% 10%;
+	padding: 1rem 1.25rem 1.5rem 1.25rem;
+}
+.stat__title {
+	color: var(--neutral-10, #ffe4c4);
+	grid-area: a;
+}
+.stat__numbers {
+	grid-area: b;
+	font-size: inherit;
+}
+.stat__numbers__success {
+	color: var(--func-accees, #4a5b03);
+	margin: 0 0 1.2rem 0;
+}
+.stat__numbers__fail {
+	color: var(--func-error, #a20808);
+}
+
+.stat__emoji {
+	grid-area: c;
+}
+.stat__total {
+	grid-area: d;
+}
+.cross {
+	top: 1.25rem;
+	right: 1.25rem;
+	position: absolute;
+	width: 10px;
+	height: 8px;
+}
+.cross img {
+	width: 100%;
+	height: 100%;
+}
+@media (min-width: 768px) {
+	.command {
+		width: 48%;
+	}
+}

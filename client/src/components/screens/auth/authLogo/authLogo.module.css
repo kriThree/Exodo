@@ -1,0 +1,18 @@
+@import "../../../../css/deffault.module.css";
+
+.logo {
+	font-size: 3rem;
+	font-family: var(--font-primary);
+	color: var(--neutral-0, #131212);
+}
+@media (min-width: 800px) {
+	.logo {
+		grid-area: a;
+		margin: 0 0 4rem 0;
+	}
+}
+@media (min-width: 900px) {
+	.logo {
+		font-size: 4rem;
+	}
+}

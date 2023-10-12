@@ -1,0 +1,16 @@
+@import "../../../css/deffault.module.css";
+.screen {
+	background: var(--theme-primary, #83a601);
+}
+.notifications {
+	display: flex;
+	flex-direction: column;
+	margin: 3rem 0 0 0;
+}
+@media (min-width: 768px) {
+	.notifications {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}

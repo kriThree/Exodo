@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const commands_1 = require("../controllers/commands");
+const auth_1 = require("../mdidleware/auth");
+const router = (0, express_1.Router)();
+router.use(auth_1.auth);
+router.post("/add", commands_1.addCommand);
+router.get("/", commands_1.getCommandWithId);
+router.get("/getAll", commands_1.getAllCommands);
+router.post("/invite", commands_1.inviteUserCommand);
+router.put("/update", commands_1.updateCommand);
+router.delete("/remove", commands_1.removeCommand);
+router.post("/leave", commands_1.leaveFromCommand);
+router.get("/getUsers", commands_1.getAllUsersAndInvitesFromCommand);
+exports.default = router;

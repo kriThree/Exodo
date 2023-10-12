@@ -1,0 +1,49 @@
+@import "../../../css/deffault.module.css";
+
+.field {
+	width: 100%;
+	display: flex;
+	font-size: 1.5rem;
+	justify-content: space-between;
+	color: var(--neutral-20);
+}
+
+.field:not(:last-child) {
+}
+.field::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	left: 0;
+	height: 1px;
+	background: var(--neutral-20, #d9d9d9);
+	transform: translate(0, 1.5rem);
+}
+.label {
+	color: var(--neutral-70, #656565);
+	flex: 1 0;
+}
+.input {
+	overflow: hidden;
+	font-size: 1.25rem;
+	margin: 0 0.5rem 0;
+}
+
+.change {
+	width: 2rem;
+	height: 2rem;
+}
+
+.change img {
+	width: 100%;
+	height: 100%;
+}
+.field_active {
+	opacity: 0.7;
+}
+@media (min-width: 450px) {
+	.change {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+}
